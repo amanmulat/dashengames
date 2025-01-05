@@ -35,7 +35,7 @@ export const TimeLimitScreen: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full text-center">
+    <div className="flex flex-col items-center justify-center h-full text-center p-5">
       <h1 className="text-black text-2xl my-3">{formatTime(timeLeft)}</h1>
 
       <Board />

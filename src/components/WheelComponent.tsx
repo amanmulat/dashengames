@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface WheelComponentProps {
   segments: string[];
@@ -239,18 +240,31 @@ const WheelComponent: React.FC<WheelComponentProps> = ({
   };
 
   return (
-    <div id="wheel">
-      <canvas
-        id="canvas"
-        ref={canvasRef}
-        width="1000"
-        height="800"
-        style={{
-          pointerEvents: isFinished && isOnlyOnce ? 'none' : 'auto',
-        }}
-      />
-      {winner && <p className="text-lg font-bold mt-4">Winner: {winner}</p>}{' '}
-      {/* Display winner */}
+    <div className="flex justify-center items-center flex-col">
+      <div id="wheel">
+        <canvas
+          id="canvas"
+          ref={canvasRef}
+          width="600"
+          height="500"
+          style={{
+            pointerEvents: isFinished && isOnlyOnce ? 'none' : 'auto',
+          }}
+        />
+
+        {/* Display winner */}
+      </div>
+      {winner && (
+        <p className="text-2xl font-bold mt-4 text-center text-black">
+          🎉 Congratulations! You have won a <br /> {winner}
+        </p>
+      )}{' '}
+      <Link
+        to={'/'}
+        className="bg-blue-500 mt-3 text-white px-6 py-2 rounded shadow hover:bg-blue-600 transition"
+      >
+        Home
+      </Link>
     </div>
   );
 };

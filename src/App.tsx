@@ -23,6 +23,7 @@ import store from './store';
 import { TimeLimitScreen } from './pages/game/TimeLimitScreen';
 import Puzzle from './pages/game/Puzzle';
 import { MinSwapsScreen } from './pages/game/MinSwapScreen';
+import Welcome from './pages/game/Welcome';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -42,6 +43,61 @@ function App() {
     <Provider store={store}>
       <Routes>
         {/* SignIn and SignUp routes outside DefaultLayout */}
+
+        <Route
+          path="/spinner"
+          element={
+            <>
+              <PageTitle title="Dashen Beer - Spinner Wheel" />
+              <Spinner />
+            </>
+          }
+        />
+        <Route
+          path="/puzzle"
+          element={
+            <>
+              <PageTitle title="Dashen Beer - Choose a Challenge " />
+              <Puzzle />
+            </>
+          }
+        />
+        <Route
+          path="/time-puzzle"
+          element={
+            <>
+              <PageTitle title="Dashen Beer - Time Puzzle" />
+              <TimeLimitScreen />
+            </>
+          }
+        />
+        <Route
+          path="/min-puzzle"
+          element={
+            <>
+              <PageTitle title="Dashen Beer - Minimum Swap Puzzle" />
+              <MinSwapsScreen />
+            </>
+          }
+        />
+        <Route
+          path="/trivia"
+          element={
+            <>
+              <PageTitle title="Dashen Beer - Trivia " />
+              <Trivia />
+            </>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <>
+              <PageTitle title="Dashen Beer - Welcome " />
+              <Welcome />
+            </>
+          }
+        />
         <Route
           path="/auth/signin"
           element={
@@ -60,54 +116,8 @@ function App() {
             </>
           }
         />
-        <Route
-          path="/spinner"
-          element={
-            <>
-              <PageTitle title="Spinner Wheel" />
-              <Spinner />
-            </>
-          }
-        />
-        <Route
-          path="/puzzle"
-          element={
-            <>
-              <PageTitle title="Time Puzzle - Dashen Beer" />
-              <Puzzle />
-            </>
-          }
-        />
-        <Route
-          path="/time-puzzle"
-          element={
-            <>
-              <PageTitle title="Time Puzzle - Dashen Beer" />
-              <TimeLimitScreen />
-            </>
-          }
-        />
-        <Route
-          path="/min-puzzle"
-          element={
-            <>
-              <PageTitle title="Time Puzzle - Dashen Beer" />
-              <MinSwapsScreen />
-            </>
-          }
-        />
-        <Route
-          path="/trivia"
-          element={
-            <>
-              <PageTitle title="Spinner Wheel" />
-              <Trivia />
-            </>
-          }
-        />
-
         {/* Routes with DefaultLayout */}
-        <Route path="/" element={<DefaultLayout />}>
+        {/* <Route path="/" element={<DefaultLayout />}>
           <Route
             index
             element={
@@ -198,7 +208,7 @@ function App() {
               </>
             }
           />
-        </Route>
+        </Route> */}
       </Routes>
     </Provider>
   );

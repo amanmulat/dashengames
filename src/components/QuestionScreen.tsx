@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Dummy Data
 const dummyQuestions = [
@@ -6,51 +7,33 @@ const dummyQuestions = [
     type: 'multiple',
     difficulty: 'easy',
     category: 'Science: Mathematics',
-    question:
-      'The metric prefix &quot;atto-&quot; makes a measurement how much smaller than the base unit?',
-    correct_answer: 'One Quintillionth',
-    incorrect_answers: [
-      'One Billionth',
-      'One Quadrillionth',
-      'One Septillionth',
-    ],
+    question: 'የክትፎ ግብአቶች ምን ምን ናቸው?',
+    correct_answer: 'ሚጥሚጣ እና ጥሬ ስጋ',
+    incorrect_answers: [' ጉበት እና ጨጟራ', 'ስጋ እና ቅቤ', 'ጎመን እና አይብ '],
   },
   {
     type: 'multiple',
     difficulty: 'easy',
     category: 'History',
-    question: 'In what year was the M1911 pistol designed?',
-    correct_answer: '1911',
-    incorrect_answers: ['1907', '1899', '1917'],
+    question: ' የበሬ ብልቶች ምን ምን ናቸው?',
+    correct_answer: 'ታናሽና ታላቅ',
+    incorrect_answers: ['ፈረሰኛ', 'ፍርንባ', 'ቀንድ'],
   },
   {
     type: 'multiple',
     difficulty: 'easy',
     category: 'Entertainment: Music',
-    question: 'Which music publication is often abbreviated to NME?',
-    correct_answer: 'New Musical Express',
-    incorrect_answers: [
-      'New Metro Entertainment',
-      'Next Musical Enterprise',
-      'North Manchester Express',
-    ],
+    question: ' የዶሮ ብልቶች ስንት ናቸው?',
+    correct_answer: 'እስራ ሁለት',
+    incorrect_answers: ['አንድ', 'ሶስት', 'አስራ ሶስት'],
   },
   {
     type: 'multiple',
     difficulty: 'easy',
     category: 'Entertainment: Board Games',
-    question:
-      'In which year was the pen and paper RPG &quot;Deadlands&quot; released?',
-    correct_answer: '1996',
-    incorrect_answers: ['2003', '1999', '1993'],
-  },
-  {
-    type: 'multiple',
-    difficulty: 'easy',
-    category: 'Geography',
-    question: 'The Alps are a mountain range on which continent?',
-    correct_answer: 'Europe',
-    incorrect_answers: ['North America', 'Asia', 'Africa'],
+    question: 'የአሸንዳ በዓል ለስንት ጊዜ ይከበራል?',
+    correct_answer: '5 ቀን',
+    incorrect_answers: ['10 ቀን', '1 ቀን', '30 ቀን'],
   },
 ];
 
@@ -95,6 +78,14 @@ const QuestionScreen = () => {
         >
           Play Again
         </button>
+        <div className="mt-4">
+          <Link
+            to={'/'}
+            className="bg-blue-500 mt-3  text-white px-6 py-2 rounded shadow hover:bg-blue-600 transition"
+          >
+            Home
+          </Link>
+        </div>
       </div>
     );
   }

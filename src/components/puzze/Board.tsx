@@ -84,7 +84,7 @@ export const Board: React.FC = () => {
 
   return (
     <div
-      className="relative bg-white shadow-lg"
+      className="relative bg-white shadow-lg p-2"
       style={{ width: imageWidth, height: imageHeight }}
     >
       {tiles}

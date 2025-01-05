@@ -53,7 +53,7 @@ export const MinSwapsScreen: React.FC = () => {
   }, [isThresholdExceeded, areTilesAligned, dispatch]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full text-center">
+    <div className="flex flex-col items-center justify-center h-full text-center p-2">
       <h1 className="text-black text-2xl my-3">
         Solve Puzzle in {threshold} Swaps or less
       </h1>

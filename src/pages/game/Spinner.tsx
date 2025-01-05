@@ -3,14 +3,26 @@ import WheelComponent from '../../components/WheelComponent';
 
 const Spinner: React.FC = () => {
   const segments2 = [
-    'better luck next time',
-    'won 70',
-    'won 10',
-    'better luck next time',
-    'won 2',
-    'won uber pass',
+    'Chicken and Eggs',
+    'Free event tickets',
+    'Four Packer Dashen beer',
+    'Key chain',
+    'Bottle opener',
+    'Small wallets',
+    'USB flash',
+    'Free Dashen beer',
   ];
-  const segColors = ['#EE4040', '#F0CF50', '#815CD1', '#3DA5E0', '#34A24F'];
+  const segColors = [
+    '#EE4040', // Red
+    '#F0CF50', // Yellow
+    '#815CD1', // Purple
+    '#3DA5E0', // Blue
+    '#34A24F', // Green
+    '#FF7F50', // Coral
+    '#FFD700', // Gold
+    '#4682B4', // Steel Blue
+  ];
+
   const onFinished = (winner) => {
     console.log(winner);
   };
