@@ -15,7 +15,7 @@ const dummyQuestions = [
     type: 'multiple',
     difficulty: 'easy',
     category: 'History',
-    question: ' የበሬ ብልቶች ምን ምን ናቸው?',
+    question: 'የበሬ ብልት ያልሆነው የቱ ነው?',
     correct_answer: 'ታናሽና ታላቅ',
     incorrect_answers: ['ፈረሰኛ', 'ፍርንባ', 'ቀንድ'],
   },

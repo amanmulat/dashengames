@@ -26,7 +26,8 @@ const dimension = { width: 400, height: 400 };
 
 const defaultState: ImageState = {
   ...dimension,
-  url: `https://unsplash.it/${dimension.width}/${dimension.height}`,
+  // url: `https://unsplash.it/${dimension.width}/${dimension.height}`,
+  url: 'https://swiftethiopia.com/wp-content/uploads/2025/01/doro.jpg',
 };
 
 const imageReducer = (

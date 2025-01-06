@@ -1,11 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Beer from '../../images/dashen/Screenshot_2024-11-19_145307-removebg-preview.png';
+import CoverOne from '../../images/dashen/background.jpg';
 
 const Welcome = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+    <div
+      className="min-h-screen bg-gray-100 flex flex-col items-center justify-center relative"
+      style={{
+        backgroundImage: `url(${CoverOne})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'top',
+      }}
+    >
+      <img
+        src={Beer}
+        alt="profile cover"
+        className="w-[400px]  rounded-tl-sm rounded-tr-sm object-cover object-center absolute bottom-0 right-0"
+      />
       <div className="text-center">
-        <h1 className="text-3xl font-bold mb-4">
+        <h1 className="text-3xl font-bold mb-4 text-white">
           Welcome <br />
           Choose a Challenge
         </h1>

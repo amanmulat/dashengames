@@ -255,7 +255,7 @@ const WheelComponent: React.FC<WheelComponentProps> = ({
         {/* Display winner */}
       </div>
       {winner && (
-        <p className="text-2xl font-bold mt-4 text-center text-black">
+        <p className="text-2xl font-bold mt-4 text-center text-white">
           🎉 Congratulations! You have won a <br /> {winner}
         </p>
       )}{' '}

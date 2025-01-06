@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import CoverOne from '../../images/dashen/background.jpg';
 import WheelComponent from '../../components/WheelComponent';
 
 const Spinner: React.FC = () => {
@@ -28,7 +29,15 @@ const Spinner: React.FC = () => {
   };
 
   return (
-    <div>
+    <div
+      className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-2"
+      style={{
+        backgroundImage: `url(${CoverOne})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'top',
+      }}
+    >
       <WheelComponent
         segments={segments2}
         segColors={segColors}
